@@ -75,3 +75,51 @@ body {
   color: red;
   text-align: center;
 }
+.update-cont {
+  text-align: center;
+}
+.form-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  /* justify-content: space-around; */
+}
+label {
+  font-size: 1.2rem;
+  color: rgb(85, 85, 85);
+  letter-spacing: 0.05rem;
+}
+.form input {
+  width: 50%;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.edit {
+  width: 53.5%;
+  height: 40px;
+  background-color: rgb(73, 162, 221);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+  letter-spacing: 0.05rem;
+}
+.edit:hover {
+  background-color: rgb(85, 178, 240);
+}
+
+input[placeholder]{
+  font-size: 1rem;
+  padding: 0 10px;
+  letter-spacing: 0.05rem;
+}
