@@ -11,10 +11,16 @@ const UpdateMovie = (props) => {
         title: '',
         director: '',
         metascore: '',
-        star: []
+        stars: []
     })
 
+
     const handleChange = e => {
+        // const value = e.target.value
+        // if(e.target.value === 'stars') {
+        //    value = Array.from(value.spilt(','));
+        // }
+        //console.log()
         setItem({
             ...item,
             [e.target.name]: e.target.value
@@ -35,10 +41,11 @@ const UpdateMovie = (props) => {
     const handleSubmit = e => {
         e.preventDefault()
         axios
-            .put(`http://localhost:3333//api/movies/${id}`, item)
+            .put(`http://localhost:5000/api/movies/${id}`, item)
             .then(res => {
                 console.log(res.data)
-
+                props.setMovieList([res.data].concat(props.movieList.filter(item => `${item.id}` !== id)))
+                push(`/`)
             })
 
     }
